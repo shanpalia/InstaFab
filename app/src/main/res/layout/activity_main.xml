@@ -4,33 +4,66 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    android:padding="20dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="InstaFab"
-        android:textColor="@color/text_primary"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Public profile viewer"
-        android:textColor="@color/text_secondary"
-        android:textSize="15sp" />
+    android:paddingStart="20dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="18dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="InstaFab"
+            android:src="@drawable/ic_instafab" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InstaFab"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Public profile viewer"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Find a public profile"
+        android:textColor="@color/text_primary"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:background="@drawable/search_background"
-        android:paddingStart="16dp"
-        android:paddingEnd="8dp">
+        android:paddingStart="14dp"
+        android:paddingEnd="7dp">
 
         <EditText
             android:id="@+id/searchInput"
@@ -42,25 +75,31 @@
             android:singleLine="true"
             android:textColor="@color/text_primary"
             android:textColorHint="@color/text_secondary"
-            android:inputType="textUri" />
+            android:inputType="textUri"
+            android:paddingStart="4dp"
+            android:paddingEnd="8dp" />
 
         <Button
             android:id="@+id/searchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
+            android:layout_width="92dp"
+            android:layout_height="46dp"
+            android:backgroundTint="@color/mint"
             android:text="Search"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/statusText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="34dp"
         android:gravity="center"
-        android:text="Search for a public profile to begin.\nNo demo or fake profiles are shown."
+        android:text="Enter a username or public profile link to begin.\n\nNo fake or demo profile data is shown."
         android:textColor="@color/text_secondary"
-        android:textSize="16sp" />
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp" />
 
     <Space
         android:layout_width="match_parent"
@@ -73,5 +112,5 @@
         android:gravity="center"
         android:text="By PaliaAPK HUB • Developer by shanpalia"
         android:textColor="@color/text_secondary"
-        android:textSize="12sp" />
+        android:textSize="11sp" />
 </LinearLayout>
