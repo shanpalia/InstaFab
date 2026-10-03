@@ -4,156 +4,218 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@color/white">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="18dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="18dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="18dp"
         android:paddingBottom="24dp">
+
+        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical">
             <ImageView
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
                 android:contentDescription="InstaFab icon"
                 android:src="@drawable/ic_instafab" />
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="InstaFab"
-                    android:textColor="@color/text_primary"
-                    android:textSize="27sp"
+                    android:textColor="#10131A"
+                    android:textSize="29sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Public profile viewer"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:text="By PaliaAPK HUB"
+                    android:textColor="#B51DD0"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Developer by shanpalia"
+                    android:textColor="#70757F"
+                    android:textSize="10sp" />
             </LinearLayout>
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
+
+        <!-- Platforms -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="Find a public profile"
-            android:textColor="@color/text_primary"
-            android:textSize="21sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Search by username or public profile link"
-            android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
+            android:layout_marginTop="14dp"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:background="@drawable/chip_selected"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Instagram"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/chip_outline"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Facebook"
+                    android:textColor="#20232B"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/chip_outline"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="TikTok"
+                    android:textColor="#20232B"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/chip_outline"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Twitter/X"
+                    android:textColor="#20232B"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Search -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="60dp"
             android:layout_marginTop="14dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:background="@drawable/search_background"
             android:paddingStart="14dp"
             android:paddingEnd="7dp">
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:text="🔗"
+                android:textSize="18sp" />
             <EditText
                 android:id="@+id/searchInput"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:hint="Username or profile link"
+                android:hint="Enter username or profile link"
                 android:inputType="textUri"
                 android:maxLines="1"
-                android:textColor="@color/text_primary"
-                android:textColorHint="@color/text_secondary" />
+                android:paddingStart="6dp"
+                android:textColor="#151820"
+                android:textColorHint="#8A8F9B" />
             <Button
                 android:id="@+id/searchButton"
-                android:layout_width="92dp"
+                android:layout_width="112dp"
                 android:layout_height="46dp"
-                android:backgroundTint="@color/mint"
-                android:text="Search"
+                android:backgroundTint="#D019E8"
+                android:text="Search Profile"
                 android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:textColor="#FFFFFF" />
         </LinearLayout>
+
+        <!-- Feature cards -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:background="@drawable/chip_selected"
-                android:gravity="center"
-                android:paddingStart="17dp"
-                android:paddingEnd="17dp"
-                android:text="Instagram"
-                android:textColor="@color/mint_dark"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/chip_outline"
-                android:gravity="center"
-                android:paddingStart="17dp"
-                android:paddingEnd="17dp"
-                android:text="Facebook"
-                android:textColor="@color/text_secondary"
-                android:textSize="13sp" />
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:gravity="center" android:text="◉\nProfile\nViewer" android:textColor="#20232B" android:textSize="12sp" android:textStyle="bold" android:background="@drawable/card_background" />
+            <TextView android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginStart="6dp" android:gravity="center" android:text="↓\nVideo\nDownloader" android:textColor="#20232B" android:textSize="12sp" android:textStyle="bold" android:background="@drawable/card_background" />
+            <TextView android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginStart="6dp" android:gravity="center" android:text="▣\nPhoto\nDownloader" android:textColor="#20232B" android:textSize="12sp" android:textStyle="bold" android:background="@drawable/card_background" />
+            <TextView android:layout_width="0dp" android:layout_height="82dp" android:layout_weight="1" android:layout_marginStart="6dp" android:gravity="center" android:text="◷\nDownload\nHistory" android:textColor="#20232B" android:textSize="12sp" android:textStyle="bold" android:background="@drawable/card_background" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Public profile viewer"
+            android:textColor="#11131A"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Search a username to load real permitted public data."
+            android:textColor="#70757F"
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp"
+            android:background="@drawable/card_background">
             <ImageView
-                android:layout_width="62dp"
-                android:layout_height="62dp"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
                 android:contentDescription="InstaFab"
                 android:src="@drawable/ic_instafab" />
             <TextView
-                android:id="@+id/statusText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:gravity="center"
-                android:text="Search a public profile to begin"
-                android:textColor="@color/text_primary"
-                android:textSize="17sp"
+                android:text="No profile data yet"
+                android:textColor="#11131A"
+                android:textSize="18sp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="6dp"
                 android:gravity="center"
-                android:text="Only real, permitted public data will be shown. No fake or demo profiles."
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
+                android:text="InstaFab never inserts fake or demo profiles. Real public data will appear only when a permitted source is connected."
+                android:textColor="#70757F"
+                android:textSize="13sp" />
         </LinearLayout>
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:gravity="center"
-            android:text="By PaliaAPK HUB  •  Developer by shanpalia"
-            android:textColor="@color/text_secondary"
-            android:textSize="12sp" />
+            android:text="Home     Downloads     Search     History     Settings"
+            android:textColor="#6B1DCE"
+            android:textSize="13sp" />
     </LinearLayout>
 </ScrollView>
