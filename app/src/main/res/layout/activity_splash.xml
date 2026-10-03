@@ -6,32 +6,36 @@
     android:gravity="center"
     android:background="@color/white"
     android:padding="24dp">
+
     <ImageView
-        android:layout_width="132dp"
-        android:layout_height="132dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:contentDescription="InstaFab icon"
         android:src="@drawable/ic_instafab" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="InstaFab"
-        android:textColor="@color/text_primary"
-        android:textSize="34sp"
+        android:textColor="#11131A"
+        android:textSize="38sp"
         android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="By PaliaAPK HUB"
-        android:textColor="@color/mint"
-        android:textSize="16sp"
+        android:textColor="#C51DCE"
+        android:textSize="17sp"
         android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Developer by shanpalia"
-        android:textColor="@color/text_secondary"
+        android:textColor="#6B7280"
         android:textSize="14sp" />
 </LinearLayout>
